@@ -1,0 +1,317 @@
+/* #### Fonts for my Game #### */
+@font-face {
+    font-family: 'Gilroy-Bold ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gilroy-Bold ☞'), url('fonts/Gilroy-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Gilroy-Heavy ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gilroy-Heavy ☞'), url('fonts/Gilroy-Heavy.woff') format('woff');
+}
+@font-face {
+    font-family: 'Gilroy-Light ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gilroy-Light ☞'), url('fonts/Gilroy-Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Gilroy-Medium ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gilroy-Medium ☞'), url('fonts/Gilroy-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Gilroy-Regular ☞';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gilroy-Regular ☞'), url('fonts/Gilroy-Regular.woff') format('woff');
+}
+
+/*Normal css*/
+*{
+    background-color: #F2BB13;
+    margin: 0;
+    padding: 0;
+    color: #403221;
+}
+#bigContainer{
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+
+
+#mainColums{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 30px;
+    height: 90vh;
+}
+
+#leftColum{
+    grid-column: 2/span 2;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+#instructionBox{
+    background-color: #D1A214;
+    grid-row: 2/span 1;
+    display: grid;
+    grid-template-areas: 'top'
+                         'mid'
+                          'bottom';
+    grid-template-rows: 150px 100px 100px;
+    border-radius: 5%;
+    height: 380px;
+    font-family: 'Gilroy-Heavy ☞';
+    font-size: 15px;
+    z-index: 5;
+}
+#movement{
+    grid-area: top;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #D1A214;
+    border-radius: 5%;
+    padding-top: 5%;
+    margin: auto;
+}
+.key{
+    height: 50px;
+    width: 50px;
+    border-radius: 30%;
+}
+.instructionsLetter{
+    color: #D1A214;
+    background-color: transparent;
+}
+#wKey{
+    grid-column: 2 /span 1;
+    margin-bottom: 5px;
+}
+#wLetter{
+    margin-left: 30%;
+}
+#aKey{
+    grid-row: 2 /span 1;
+    margin-right: 10px;
+}
+#aLetter{
+    margin-left: 40%;
+}
+#sKey{
+    grid-row: 2 /span 1;
+    grid-column: 2/ span 1;
+}
+#sLetter{
+    margin-left: 40%;
+}
+#dKey{
+    grid-row: 2 /span 1;
+    grid-column: 3/ span 1;
+    margin-left: 3px;
+}
+#dLetter{
+    margin-left: 40%;
+}
+#jKey{
+    margin-left: 30%;
+}
+#jLetter{
+    margin-left: 40%;
+}
+#nKey{
+    margin-left: 20%;
+    width: 70px;
+    border-radius: 6px;
+}
+#nLetter{
+    margin-left: 20%;
+}
+#mKey{
+    margin-right: 10px;
+}
+#mLetter{
+    margin-left: 40%;
+}
+#especialKeys{
+    grid-area: mid;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: #D1A214;
+    padding-top: 15%;
+}
+#helpButtons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: transparent;
+    padding-top: 20%;
+}
+
+
+
+
+#mainGameDiv{
+    grid-column: 4/span 5;
+    display: grid;
+    width: 470px;
+    margin: auto;
+    grid-template-columns: 80px 300px 80px;
+    grid-gap: 25px;
+}
+#holdBox{
+    background-color: #F6D7BB;
+    display: grid;
+    height: 148px;
+    width: 80px;
+    grid-template-rows: 28px 168px;
+    border: solid 4px #403221;
+    border-radius: 5px;
+    z-index: 10;
+}
+#holdBox a{
+    font-family: 'Gilroy-Medium ☞';
+    font-size: 26px;
+    background-color: #F6D7BB;
+    text-align: center;
+}
+#holdBoard{
+    background-color: blue;
+}
+
+#score\&mainBoardCont{
+    display: grid;
+    grid-template-rows: 607.5px 20px;
+    z-index: 10;
+}
+#mainBoard{
+    border: solid 4px #403221;
+    border-radius: 5px;
+}
+#currentScore{
+    font-family: 'Gilroy-Bold ☞';
+    font-style: italic;
+    font-size: 30px;
+    padding: 0;
+    color: #FFF3E3;
+    z-index: 5;
+}
+
+#nextBox{
+    background-color: #FFF3E3;
+    display: grid;
+    grid-template-rows: 28px 448px;
+    border: solid 4px #403221;
+    height: 348px;
+    width: 80px;
+    border-radius: 5px;
+    z-index: 5;
+}
+#nextBox a{
+    font-family: 'Gilroy-Medium ☞';
+    background-color: #F6D7BB;
+    font-size: 26px;
+    text-align: center;
+}
+#nextBoard{
+    background-color: red;
+}
+
+
+
+
+#rightColum{
+    grid-column: 10/span 2;
+    display: grid;
+    grid-template-rows: 1fr;
+}
+#bottomRight{
+    grid-row: 1/span 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: right;
+    align-items: center;
+}
+#tetrisText{
+    font-family: 'Gilroy-Light ☞';
+    font-size: 64px;
+}
+
+#levelTxt{
+    font-family: 'Gilroy-Medium ☞';
+    font-style: italic;
+    font-size: 50px;
+}
+#ScoreBox{
+    display: grid;
+    grid-template-columns: 55px 70%;
+    font-family: 'Gilroy-Light ☞';
+    font-style: italic;
+    font-size: 30px;
+}
+
+.material-icons{
+    background-color: transparent;
+    color: #403221;
+    font-size: 40px;
+    margin-left: 25%;
+}
+#pauseIcon:hover{
+    cursor: pointer;
+    font-size: 44px;
+}
+#pauseMusic:hover{
+    cursor: pointer;
+    font-size: 44px;
+}
+#infoButton:hover{
+    cursor: pointer;
+    font-size: 44px;
+}
+#infoButton:active{
+    color: white;
+}
+
+@media only screen and (max-width: 1400px){
+    #bigContainer{
+        padding-top: 5px;
+    }
+
+    #leftColum {
+        grid-column: 1/span 1; 
+    }
+    #instructionBox{
+        display: block;
+        margin-left: 30px;
+        padding-top: 20%;
+        width: 80px;
+
+    }
+    #helpButtons{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 130px 130px;
+        align-items: stretch;
+    }
+    .material-icons{
+        margin: auto;
+    }
+    #movement{
+        display: none;
+    }
+    #especialKeys{
+        display: none;
+    }
+    .key{
+        width: 30px;
+        height: 30px;
+    }
+    #mainGameDiv{
+        grid-column: 3/span 6;
+        padding-right: 70px;
+    }
+}

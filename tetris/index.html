@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="style.css" rel= "stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src='constants.js' defer></script>
+		<script src='piece.js' defer></script>
+        <script src='nextPiece.js' defer></script>
+		<script src='main.js' defer></script>
+		<link href="style.css" rel='stylesheet'>
+    </head>
+    <body>
+        <div id = 'bigContainer'>
+            <div id='mainColums'>
+                <div id='leftColum'>
+                    <div id = 'instructionBox'>
+                        <div id = 'movement'>
+                            <div class = 'key' id = 'wKey'>
+                                <a class = 'instructionsLetter' id = 'wLetter'>W</a>
+                            </div>
+
+                            <div class = 'key' id = 'aKey'>
+                                <a class = 'instructionsLetter' id = 'aLetter'>A</a>
+                            </div>
+
+                            <div class = 'key' id = 'sKey'>
+                                <a class = 'instructionsLetter' id = 'sLetter'>S</a>
+                            </div>
+                            <div class = 'key' id = 'dKey'>
+                                <a class = 'instructionsLetter' id = 'dLetter'>D</a>
+                            </div>
+                        </div>
+                        <div id = 'especialKeys'>
+                            <div class = 'key' id = 'jKey'>
+                                <a class = 'instructionsLetter' id = 'jLetter'>Q</a>
+                            </div>
+                            <div class = 'key' id = 'nKey'>
+                                <a class = 'instructionsLetter' id = 'nLetter'>Space</a>
+                            </div>
+                            <div class = 'key' id = 'mKey'>
+                                <a class = 'instructionsLetter' id = 'mLetter'>M</a>
+                            </div>
+                        </div>
+                        <div id = 'helpButtons'>
+                            <span class="material-icons" id = 'infoButton'>info</span>
+                            <span class="material-icons" id = 'pauseMusic'>volume_up</span>
+                            <span class="material-icons" id = 'pauseIcon'>pause</span>
+                        </div>
+                    </div>
+                </div>
+                <div id= 'mainGameDiv'>
+                    <div id = 'holdBox'>
+                        <a>Hold</a>
+                        <canvas id= 'holdBoard' height="120px"></canvas>
+                    </div>
+                    <div id = 'score&mainBoardCont'>
+                        <canvas id = 'mainBoard'></canvas>
+                        <a id = 'currentScore'>000000</a>
+                    </div>
+                    <div id = 'nextBox'>
+                        <a>Next</a>
+                        <canvas id = 'nextBoard' height="320px"></canvas>
+                    </div>
+                </div>
+                <div id = 'rightColum'>
+                    <div id = 'bottomRight'>
+                        <a id = 'tetrisText'>Tetris</a>
+                        <div id = ScoreBox>
+                            <span class="material-icons" id = 'cup'>emoji_events</span>
+                            <a id = 'bestScore'>000000</a>
+                        </div>
+                        <a id= 'levelTxt'>Level 1</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <audio id = 'tetrisSong' autoplay='autoplay'>
+            <source src="media/MainThemeTetris.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'moveSound'>
+            <source src="media/Sfx/SfxPieceMove.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'rotateSound'>
+            <source src="media/Sfx/SfxPieceRotation.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'lockSound'>
+            <source src="media/Sfx/SfxPieceLock.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'holdSound'>
+            <source src="media/" type="audio/mp3">
+        </audio>
+        <audio id = 'cleanLineSound'>
+            <source src="media/Sfx/SfxCleanLine.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'tetrisSound'>
+            <source src="media/Sfx/SfxTetrisSound.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'SfxClearLineVoice1'>
+            <source src="media/Voices/SfxClearLineVoice1.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'SfxClearLineVoice2'>
+            <source src="media/Voices/SfxClearLineVoice2.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'SfxClearLineVoice3'>
+            <source src="media/Voices/SfxClearLineVoice3.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'SfxClearLineVoice4'>
+            <source src="media/Voices/SfxClearLineVoice4.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'SfxClearLineVoice5'>
+            <source src="media/Voices/SfxClearLineVoice5.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'SfxClearLineVoice6'>
+            <source src="media/Voices/SfxClearLineVoice6.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'SfxClearLineVoice7'>
+            <source src="media/Voices/SfxClearLineVoice7.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'SfxClearLineVoice8'>
+            <source src="media/Voices/SfxClearLineVoice8.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'SfxClearLineVoice9'>
+            <source src="media/Voices/SfxClearLineVoice9.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'SfxTetrisVoice1'>
+            <source src="media/Voices/SfxClearTetrisVoice1.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'SfxTetrisVoice2'>
+            <source src="media/Voices/SfxClearTetrisVoice2.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'SfxTetrisVoice3'>
+            <source src="media/Voices/SfxClearTetrisVoice3.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'SfxTetrisVoice4'>
+            <source src="media/Voices/SfxClearTetrisVoice4.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'SfxTetrisVoice5'>
+            <source src="media/Voices/SfxClearTetrisVoice5.mp3" type="audio/mp3">
+        </audio>
+        <audio id = 'SfxGameOver'>
+            <source src="media/Sfx/SfxGameOverSound.mp3" type="audio/mp3">
+        </audio>
+    </body>
+</html>
